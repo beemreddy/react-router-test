@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
 import { Tomato } from './Tomato';
 import { Spinach } from './Spinach';
+import { AerogardenRedHeirloomCherry } from './tomato/ag-red-heirloom-cherry';
+import { TinyTim } from './tomato/tiny-tim';
 
 const root = document.getElementById('root');
 
@@ -14,7 +16,10 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}>
-        <Route path="tomato" element={<Tomato/>} />
+        <Route path="tomato" element={<Tomato/>} >
+          <Route path="ag-red-heirloom-cherry" element={<AerogardenRedHeirloomCherry />} />
+          <Route path="tiny-tim" element={<TinyTim />} />
+        </Route>
         <Route path="spinach" element={<Spinach/>} />
         
         <Route path="*" element={<NotFound/>} />

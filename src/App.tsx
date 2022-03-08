@@ -11,7 +11,8 @@ function App() {
       <div style={{display: "flex"}}>
         <nav style={{
           borderRight: "solid 1px",
-          paddingBottom: "24px"
+          paddingBottom: "24px",
+          marginRight: "24px"
         }}>
           <NavLink 
               style={({isActive}) => {
