@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
 import { Tomato } from './tomato/Tomato';
 import { Spinach } from './spinach/Spinach';
@@ -15,23 +15,15 @@ import { SpinachVariety } from './spinach/spinach-variety';
 const root = document.getElementById('root');
 
 ReactDOM.render( 
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter>
     <Routes>
-      <Route path="/" element={<App/>}>
+      <Route path="/" element={<App/>} >
         <Route path="tomato" element={<Tomato/>} >
           <Route path=":id" element={<TomatoVariety />} />
         </Route>
-        <Route path="spinach" element={<Spinach/>} >
-          <Route path=":id" element={<SpinachVariety />} />
-        </Route>
-        <Route path="radish" element={<Radish/>}>
-          <Route path=":id" element={<RadishVariety/>} />
-        </Route>
-
-        <Route path="*" element={<NotFound/>} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   root
 );
 
@@ -39,3 +31,21 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// <Router basename={process.env.PUBLIC_URL}>
+//     <Routes>
+//       <Route path="/" element={<App/>}>
+//         <Route path="tomato" element={<Tomato/>} >
+//           <Route path=":id" element={<TomatoVariety />} />
+//         </Route>
+//         <Route path="spinach" element={<Spinach/>} >
+//           <Route path=":id" element={<SpinachVariety />} />
+//         </Route>
+//         <Route path="radish" element={<Radish/>}>
+//           <Route path=":id" element={<RadishVariety/>} />
+//         </Route>
+
+//         <Route path="*" element={<NotFound/>} />
+//       </Route>
+//     </Routes>
+//   </Router>

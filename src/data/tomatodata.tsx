@@ -45,7 +45,7 @@ let varieties = [
       return varieties.map((v) => ({
         key: v.key,
         name: v.name,
-        url: `/tomato/${v.key}`
+        url: `#/tomato/${v.key}`
       }));
   }
   
