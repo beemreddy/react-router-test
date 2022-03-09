@@ -5,9 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
-import { Tomato } from './Tomato';
-import { Spinach } from './Spinach';
-import { TomatoVariety } from './TomatoVariety';
+import { Tomato } from './tomato/Tomato';
+import { Spinach } from './spinach/Spinach';
+import { TomatoVariety } from './tomato/TomatoVariety';
+import { Radish } from './radish/Radish';
+import { RadishVariety } from './radish/radish-variety';
+import { SpinachVariety } from './spinach/spinach-variety';
 
 const root = document.getElementById('root');
 
@@ -18,8 +21,13 @@ ReactDOM.render(
         <Route path="tomato" element={<Tomato/>} >
           <Route path=":id" element={<TomatoVariety />} />
         </Route>
-        <Route path="spinach" element={<Spinach/>} />
-        
+        <Route path="spinach" element={<Spinach/>} >
+          <Route path=":id" element={<SpinachVariety />} />
+        </Route>
+        <Route path="radish" element={<Radish/>}>
+          <Route path=":id" element={<RadishVariety/>} />
+        </Route>
+
         <Route path="*" element={<NotFound/>} />
       </Route>
     </Routes>

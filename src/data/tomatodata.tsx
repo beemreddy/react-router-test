@@ -10,6 +10,16 @@ let varieties = [
         name: "Tiny Tim"
     },
     {
+        key: "red-robin",
+        id: "9uWR6dp0nIQ",
+        name: "Red Robin"
+    },
+    {
+        key: "orange-hat",
+        id: "TtWMlTqVCgo",
+        name: "Orange Hat"
+    },
+    {
         key: "42-day",
         id: "hCAu6fTtZZc",
         name: "42 Day"
@@ -30,6 +40,14 @@ let varieties = [
         name: "Wherokowhai"
     }
   ];
+
+  export function getTomatoVarieties() {
+      return varieties.map((v) => ({
+        key: v.key,
+        name: v.name,
+        url: `/tomato/${v.key}`
+      }));
+  }
   
   export function getPlantInfo(key: string){
     return varieties.find((v) => v.key === key);
