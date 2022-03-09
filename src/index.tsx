@@ -15,7 +15,7 @@ import { SpinachVariety } from './spinach/spinach-variety';
 const root = document.getElementById('root');
 
 ReactDOM.render( 
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App/>}>
         <Route path="tomato" element={<Tomato/>} >
