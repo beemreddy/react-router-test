@@ -18,9 +18,21 @@ ReactDOM.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App/>} >
+
         <Route path="tomato" element={<Tomato/>} >
           <Route path=":id" element={<TomatoVariety />} />
         </Route>
+
+        <Route path="spinach" element={<Spinach/>} >
+          <Route path=":id" element={<SpinachVariety />} />
+        </Route>
+
+        <Route path="radish" element={<Radish/>}>
+          <Route path=":id" element={<RadishVariety/>} />
+        </Route>
+
+        <Route path="*" element={<NotFound/>} />
+
       </Route>
     </Routes>
   </HashRouter>,
@@ -31,21 +43,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-// <Router basename={process.env.PUBLIC_URL}>
-//     <Routes>
-//       <Route path="/" element={<App/>}>
-//         <Route path="tomato" element={<Tomato/>} >
-//           <Route path=":id" element={<TomatoVariety />} />
-//         </Route>
-//         <Route path="spinach" element={<Spinach/>} >
-//           <Route path=":id" element={<SpinachVariety />} />
-//         </Route>
-//         <Route path="radish" element={<Radish/>}>
-//           <Route path=":id" element={<RadishVariety/>} />
-//         </Route>
-
-//         <Route path="*" element={<NotFound/>} />
-//       </Route>
-//     </Routes>
-//   </Router>

@@ -25,7 +25,7 @@ let varieties = [
       return varieties.map((v) => ({
         key: v.key,
         name: v.name,
-        url: `/radish/${v.key}`
+        url: `#/radish/${v.key}`
       }));
   }
   

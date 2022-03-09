@@ -20,7 +20,7 @@ let varieties = [
       return varieties.map((v) => ({
         key: v.key,
         name: v.name,
-        url: `/spinach/${v.key}`
+        url: `#/spinach/${v.key}`
       }));
   }
   
