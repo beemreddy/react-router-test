@@ -11,10 +11,14 @@ import { TomatoVariety } from './tomato/TomatoVariety';
 import { Radish } from './radish/Radish';
 import { RadishVariety } from './radish/radish-variety';
 import { SpinachVariety } from './spinach/spinach-variety';
+import { initializeIcons, ThemeProvider } from '@fluentui/react';
 
 const root = document.getElementById('root');
 
+initializeIcons();
+
 ReactDOM.render( 
+  <ThemeProvider>
   <HashRouter>
     <Routes>
       <Route path="/" element={<App/>} >
@@ -35,7 +39,8 @@ ReactDOM.render(
 
       </Route>
     </Routes>
-  </HashRouter>,
+  </HashRouter>
+  </ThemeProvider>,
   root
 );
 

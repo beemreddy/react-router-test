@@ -7,11 +7,11 @@ export function TomatoVariety() {
     const variety = getPlantInfo(params.id!)
 
     return(
-        <div style={{width: "100%"}}>
-            <h1 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <img src={logo} alt="Tomato" style={{width: "100px", padding: "24px"}}></img>
+        <div style={{width: "60%"}}>
+            <h1 style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
+                <img src={logo} alt="Tomato" style={{width: "50px", padding: "24px"}}></img>
                 {variety?.name}
-                <img src={logo} alt="Tomato" style={{width: "100px", padding: "24px"}}></img>
+                <img src={logo} alt="Tomato" style={{width: "50px", padding: "24px"}}></img>
             </h1>
 
             <iframe 

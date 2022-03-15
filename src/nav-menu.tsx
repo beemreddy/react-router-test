@@ -13,26 +13,26 @@ const spinachVarieties = getSpinachVarieties();
 const navLinkGroups: INavLinkGroup[] = [
   {
     name: 'Tomatoes',
-    expandAriaLabel: 'Expand Basic components section',
-    collapseAriaLabel: 'Collapse Basic components section',
+    expandAriaLabel: 'Expand Tomatoes section',
+    collapseAriaLabel: 'Collapse Tomatoes section',
     links: tomatoVarieties
   },
   {
     name: 'Radish',
-    expandAriaLabel: 'Expand Extended components section',
-    collapseAriaLabel: 'Collapse Extended components section',
+    expandAriaLabel: 'Expand Radish section',
+    collapseAriaLabel: 'Collapse Radish section',
     links: radishVarieties
   },
   {
     name: 'Spinach',
-    expandAriaLabel: 'Expand Utilities section',
-    collapseAriaLabel: 'Collapse Utilities section',
+    expandAriaLabel: 'Expand Spinach section',
+    collapseAriaLabel: 'Collapse Spinach section',
     links: spinachVarieties
   },
 ];
 
 export const NavFabricDemoAppExample: React.FunctionComponent = () => {
   return (
-    <Nav styles={navStyles} ariaLabel="Nav example similar to one found in this demo page" groups={navLinkGroups} />
+    <Nav styles={navStyles} ariaLabel="Navigation menu for video categories and videos" groups={navLinkGroups} />
   );
 };
